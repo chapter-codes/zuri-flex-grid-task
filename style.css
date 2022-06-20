@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* FLEX STYLES */
+
+.flex{
+    color:white;
+    padding:2rem 4rem;
+    background-color:hsl(0, 0%, 95%) ;
+}
+.flex .container{
+    display: flex; 
+    justify-content: center;
+    overflow: hidden;
+    border-radius:5px;
+    max-width:800px;
+    margin:auto;
+}
+
+.flex .container >div{
+   padding:1.5rem .5rem 1rem 1.5rem;
+   width:300px;
+   padding:0 1.5rem;
+   
+}
+.flex .one{
+    background-color:hsl(31, 77%, 52%) ;
+}
+.flex .two{
+    background-color:hsl(184, 100%, 22%) ;
+}
+.flex .three{
+    background-color: hsl(179, 100%, 13%);
+}
+
+.flex .logo{
+    margin:2rem 0;
+}
+
+.flex .desc{
+    margin:1.5rem 0;
+    text-transform: uppercase;
+    font-family:"Big Shoulders Display" , cursive;
+    font-size: 40px;
+    color:hsl(0, 0%, 95%);
+}
+
+.flex .desc-text{
+    margin:1rem 0;
+    line-height:1.5rem;
+    max-width:250px;
+    min-height:100px;
+    font-family:"Lexend Deca" , sans-serif;
+    color:hsla(0, 0%, 100%, 0.75)
+}
+
+
+.flex .cta{
+    margin:4rem 0 2rem;
+    height:3rem;
+    width:150px;
+    padding:.5rem ;
+    border-radius: 50px;
+    border-style: none;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family:"Lexend Deca" , sans-serif;
+}
+
+  
+.one .cta{
+   color: hsl(31, 77%, 52%);
+}
+.one .cta:hover{
+    background-color: hsl(31, 77%, 52%);
+    
+ }
+.two .cta{
+    color: hsl(184, 100%, 22%)
+ }
+ .two .cta:hover{
+    background-color: hsl(184, 100%, 22%)
+ }
+ .three .cta{
+    color:  hsl(179, 100%, 13%)
+ }
+ .three .cta:hover{
+    background-color:  hsl(179, 100%, 13%)
+ }
+
+ .cta:hover{
+    color: white;
+    border: 2px solid hsla(0, 0%, 100%, 0.75)
+  }
+
+
+
+
+/* GRID STYLES */
+
+.grid .container{
+    display: grid;
+    grid-template-areas: "one one two"
+                         "three four four"
+                         "three five five";
+    grid-template-columns: 1fr .5fr 1fr ;
+    grid-template-rows: 200px 100px 120px;
+    gap: .5rem   ;
+    padding:1rem;
+    justify-content: center;
+    max-width:800px;
+    margin:auto;
+            
+}
+
+
+.grid .one{
+    grid-area:one;
+    background-color: rgb(247, 61, 14);
+}
+.grid .two{
+    grid-area:two;
+    background-color: rgb(250, 154, 11);
+}
+.grid .three{
+    grid-area:three;
+    background-color: rgb(30, 190, 30);
+}
+.grid .four{
+    grid-area:four;
+    background-color: rgb(57, 115, 241);
+}
+.grid .five{
+    grid-area:five;
+    background-color: rgb(57, 115, 241);
+}
+
+@media(max-width:500px){
+    .flex .container{    flex-direction: column;
+        align-items: center;
+        margin:2rem 0;
+    }
+    .flex .container> div{
+        width: 100%;
+
+    }
+}
